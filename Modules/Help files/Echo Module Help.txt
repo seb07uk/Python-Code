@@ -1,0 +1,98 @@
+📘 echo — echo module in pure Python [en-pl]
+The echo module is used to display text passed as arguments.
+It includes ANSI‑colored output and basic error handling.
+
+🧩 How it works
+The module provides two functions:
+- run(args=None)
+The main function, automatically invoked by the system.
+- If no arguments are provided — it displays a usage message.
+- If text is provided — it prints it in green.
+- In case of an error — it displays a message in red.
+- echo(text: str) -> str
+A helper function that simply returns the given text.
+It can be used in other modules or tests.
+
+---
+
+▶️ Usage
+Display text
+e echo Hello world
+
+Result (in a color-capable terminal):
+- text printed in green
+No arguments
+e echo
+
+Result:
+- usage message printed in yellow
+
+⚠️ Error handling
+If an exception occurs during the execution of run(), the module:
+- catches it
+- displays an error message in red
+- does not interrupt the parent program
+
+📦 Integration example
+from echo import echo
+
+msg = echo("Test message")
+print(msg)
+
+If you want, I can also prepare:
+- a manpage version (echo(1))
+- an HTML version
+- auto‑generated documentation (e.g., Sphinx / pdoc)
+- CLI-style --help output
+Just let me know which format you prefer.
+
+
+-----PL-----
+
+📘 echo — moduł echo w czystym Pythonie
+Moduł echo służy do wyświetlania tekstu przekazanego jako argumenty.
+Zawiera kolorowe wyjście ANSI oraz podstawową obsługę błędów.
+
+🧩 Opis działania
+Moduł udostępnia dwie funkcje:
+1. run(args=None)
+Główna funkcja wywoływana automatycznie przez system.
+- Jeśli nie podano argumentów — wyświetla komunikat o użyciu.
+- Jeśli podano tekst — wypisuje go w kolorze zielonym.
+- W przypadku błędu — wyświetla komunikat w kolorze czerwonym.
+2. echo(text: str) -> str
+Funkcja pomocnicza, która po prostu zwraca przekazany tekst.
+Może być używana w innych modułach lub testach.
+
+---
+
+▶️ Użycie
+Wyświetlenie tekstu
+e echo Hello world
+
+Wynik (na kolorowym terminalu):
+- tekst w kolorze zielonym
+Brak argumentów
+e echo
+
+Wynik:
+- komunikat o użyciu w kolorze żółtym
+
+⚠️ Obsługa błędów
+Jeśli podczas działania funkcji run() wystąpi wyjątek, moduł:
+- przechwytuje go
+- wyświetla komunikat w kolorze czerwonym
+- nie przerywa działania programu nadrzędnego
+
+📦 Przykład integracji
+from echo import echo
+
+msg = echo("Test message")
+print(msg)
+
+Jeśli chcesz, mogę przygotować również:
+- wersję w formacie manpage (echo(1))
+- wersję HTML
+- automatycznie generowaną dokumentację (np. Sphinx / pdoc)
+- help w stylu --help dla CLI
+Daj tylko znać, w jakiej formie chcesz to mieć.
