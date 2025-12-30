@@ -27,7 +27,7 @@ class Colors:
     }
 
 def get_paint_dir():
-    # Folder set to %userprofile%\.polsoft\psCLI\PaintCli\
+    # Folder set to %userprofile%\.polsoft\Paint\
     folder = os.path.join(os.environ['USERPROFILE'], '.polsoft', 'Paint')
     if not os.path.exists(folder):
         os.makedirs(folder, exist_ok=True)
@@ -38,13 +38,13 @@ def show_about():
     print(f"""
 {Colors.BG_CYAN}{Colors.BLACK}           INFORMATION & AUTHOR           {Colors.RESET}
 
-Author:  Sebastian Januchowski
-Email:   polsoft.its@fastservice.com
-GitHub:  https://github.com/seb07uk
+Author:  **Sebastian Januchowski**
+Email:   **polsoft.its@fastservice.com**
+GitHub:  **https://github.com/seb07uk**
 
-------------------------------------------------------
-Save Path: %userprofile%\\.polsoft\\psCLI\\PaintCli\\
-------------------------------------------------------
+-------------------------------------------
+Save Path: %userprofile%\\.polsoft\\Paint\\
+-------------------------------------------
 
 CONTROLS:
 - WASD: Move cursor (@)
@@ -90,7 +90,7 @@ def open_file_menu(width, height):
                         if char == '#': new_board[r][c] = ('#', Colors.GREEN)
             return new_board, f"Loaded: {os.path.basename(files[selected_idx])}"
 
-def main(args=None):
+def main():
     os.system('') 
     sys.stdout.write('\033[?25l') # Hide cursor
     
